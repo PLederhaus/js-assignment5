@@ -38,6 +38,9 @@ const items = [
 
 // Omit the 'age' element
 
-const person = items // append your code here
+items.splice(2,1)
+const person = Object.fromEntries(items)
 
 test("Problem 4", person)
+
+// Finished - confirmed

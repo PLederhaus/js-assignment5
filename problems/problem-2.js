@@ -49,6 +49,15 @@ const strings = [
 	'"firstName":"Mace","lastName":"Windu","age":53,"occupation":"Jedi","homePlanet":"Haruun Kal"'
 ]
 
-const jedi = strings // append your code here
+const updateStrings = []
+
+for (let x = 0; x < strings.length; x++)
+{
+	updateStrings[x] = JSON.parse("{" + strings[x].substring(0, 1) + strings[x].substring(1, strings[x].length) + "}")
+}
+
+const jedi = (updateStrings.filter(string => string.occupation === "Jedi"))
 
 test("Problem 2", jedi)
+
+// Finished - confirmed
